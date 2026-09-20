@@ -17,6 +17,5 @@ def test_validate_phone_rejects_short_number():
     assert not validate_phone("555-1234")
 
 
-# Disabled for the first CI demonstration: it has an intentionally wrong assertion.
-# def test_mask_email_basic():
-#     assert mask_email("alice@example.com") == "a***@example.com"
+def test_mask_email_basic():
+    assert mask_email("alice@example.com") == "a***@example.com"
