@@ -8,6 +8,11 @@ def validate_email(email: str) -> bool:
     return bool(re.fullmatch(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", email))
 
 
+def normalize_email(email: str) -> str:
+    """Normalize an email for comparison."""
+    return email.strip().lower()
+
+
 def validate_phone(phone: str) -> bool:
     """Return whether a phone contains 10 to 15 digits."""
     digits = re.sub(r"\D", "", phone)
